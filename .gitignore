@@ -1,0 +1,5 @@
+.vscode
+.idea
+.pylintrc
+*.pyc
+.DS_Store

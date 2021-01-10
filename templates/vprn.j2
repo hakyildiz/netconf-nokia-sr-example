@@ -1,0 +1,89 @@
+<config>
+    <configure xmlns="{{ ns }}">
+        <service>
+            {% for vprn in vprns %}
+            <vprn operation="{{ vprn.operation }}">
+                <service-name>{{ vprn.service_name }}</service-name>
+                <customer>{{ vprn.customer }}</customer>
+                {% if vprn.state is defined %}
+                <admin-state>{{ vprn.state }}</admin-state>
+                {% endif %}
+                {% if vprn.as is defined %}
+                <autonomous-system>{{ vprn.as }}</autonomous-system>
+                {% endif %}
+                {% if vprn.ecmp is defined %}
+                <ecmp>{{ vprn.ecmp }}</ecmp>
+                {% endif %}
+                {% if vprn.rd is defined %}
+                <route-distinguisher>{{ vprn.rd }}</route-distinguisher>
+                {% endif %}
+                {% if vprn.resolution is defined %}
+                <auto-bind-tunnel>
+                    <resolution>{{ vprn.resolution }}</resolution>
+                </auto-bind-tunnel>
+                {% endif %}
+                {% for int in vprn.interfaces %}
+                <interface operation="{{ int.operation }}">
+                    <interface-name>{{ int.name }}</interface-name>
+                    {% if int.loopback is defined %}
+                    <loopback>true</loopback>
+                    {% endif %}
+                    {% if int.state is defined %}
+                    <admin-state>{{ int.state }}</admin-state>
+                    {% endif %}
+                    {% if int.ipv4_address is defined %}
+                    <ipv4>
+                        <primary>
+                            <address>{{ int.ipv4_address }}</address>
+                            <prefix-length>{{ int.ipv4_mask }}</prefix-length>
+                        </primary>
+                    </ipv4>
+                    {% endif %}
+                    {% if int.sap is defined %}
+                    <sap>
+                    <sap-id>{{ int.sap }}</sap-id>
+                    </sap>                   
+                    {% endif %}
+                </interface>
+                {% endfor %}
+                {% if vprn.bgp is defined %}
+                <bgp>
+                    {% if vprn.bgp.state is defined %}
+                    <admin-state>{{ vprn.bgp.state }}</admin-state>
+                    {% endif %}
+                    {% if vprn.bgp.import_policy is defined %}
+                    <import>
+                        <policy>{{ vprn.bgp.import_policy }}</policy>
+                    </import>
+                    {% endif %}
+                    {% if vprn.bgp.export_policy is defined %}
+                    <export>
+                        <policy>{{ vprn.bgp.export_policy }}</policy>
+                    </export>
+                    {% endif %}
+                    {% for group in vprn.bgp.groups %}
+                    <group>
+                        <group-name>{{ group.name }}</group-name>
+                        <type>{{ group.type }}</type>
+                        <family>
+                            <{{ group.family.lower() }}>true</{{ group.family.lower() }}>
+                        </family>
+                        <local-as>
+                            <as-number>{{ group.local_as }}</as-number>
+                        </local-as>
+                    </group>
+                    {% endfor %}
+                    {% for nb in vprn.bgp.neighbors %}
+                    <neighbor>
+                        <ip-address>{{ nb.address }}</ip-address>
+                        <group>{{ nb.group }}</group>
+                        <peer-as>{{ nb.peer_as }}</peer-as>
+                    </neighbor>
+                    {% endfor %}
+                </bgp>
+                {% endif %}
+            </vprn>
+            {% endfor %}
+        </service>
+    </configure>
+</config>

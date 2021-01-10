@@ -1,0 +1,2290 @@
+2021-01-08 21:24:33,013 INFO Connected (version 2.0, client OpenSSH_3.5p1)
+2021-01-08 21:24:33,856 INFO Authentication (publickey) failed.
+2021-01-08 21:24:34,215 INFO Authentication (password) successful!
+2021-01-08 21:24:34,449 INFO [host 192.168.1.138 session 0x1e0a9d7cf70] Sending:
+<?xml version="1.0" encoding="UTF-8"?><hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><capabilities><capability>urn:ietf:params:netconf:base:1.0</capability></capabilities></hello>]]>]]>
+2021-01-08 21:24:34,580 INFO [host 192.168.1.138 session 0x1e0a9d7cf70] Received message from host
+2021-01-08 21:24:34,584 INFO [host 192.168.1.138 session-id 423] initialized: session-id=423 | server_capabilities=<dict_keyiterator object at 0x000001E0A9E5E310>
+2021-01-08 21:24:34,608 INFO [host 192.168.1.138 session-id 423] Requesting 'Lock'
+2021-01-08 21:24:34,685 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:daf9285f-254a-45c0-8962-8a4ef20a252e"><lock><target><running/></target></lock></rpc>]]>]]>
+2021-01-08 21:24:34,950 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:34,951 INFO [host 192.168.1.138 session-id 423] Requesting 'Lock'
+2021-01-08 21:24:35,052 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:9ec6aec2-9932-402e-83c4-0218ec6e2f8e"><lock><target><candidate/></target></lock></rpc>]]>]]>
+2021-01-08 21:24:35,477 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:35,478 INFO 192.168.1.138conection locked
+2021-01-08 21:24:35,481 INFO [host 192.168.1.138 session-id 423] Requesting 'EditConfig'
+2021-01-08 21:24:35,578 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:959c4a00-d8ac-4e6f-b525-31c8c59c38cf"><edit-config><target><candidate/></target><config>
+    <configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+        <service>
+            
+            <vprn operation="delete">
+                <service-name>1005</service-name>
+                <customer>1</customer>
+                
+                
+                
+                
+                
+                
+                <interface operation="delete">
+                    <interface-name>to_sr2</interface-name>
+                    
+                    
+                    
+                    
+                </interface>
+                
+                <interface operation="delete">
+                    <interface-name>lo0</interface-name>
+                    
+                    
+                    
+                    
+                </interface>
+                
+                
+            </vprn>
+            
+        </service>
+    </configure>
+</config></edit-config></rpc>]]>]]>
+2021-01-08 21:24:35,930 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:35,931 WARNING 192.168.1.138 "VPRN 1005 DELETE" data missing
+2021-01-08 21:24:35,940 INFO [host 192.168.1.138 session-id 423] Requesting 'Unlock'
+2021-01-08 21:24:36,031 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:ad0aa4cc-97ef-451d-a13c-ba8de1f53305"><unlock><target><candidate/></target></unlock></rpc>]]>]]>
+2021-01-08 21:24:36,295 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:36,296 INFO [host 192.168.1.138 session-id 423] Requesting 'Unlock'
+2021-01-08 21:24:36,397 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:455fbc2b-70a4-43dd-8bf2-91928a0bf4fe"><unlock><target><running/></target></unlock></rpc>]]>]]>
+2021-01-08 21:24:36,668 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:36,670 INFO [host 192.168.1.138 session-id 423] Requesting 'GetConfig'
+2021-01-08 21:24:36,769 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:cbf571b7-04d7-426c-ba53-c8caa0854664"><get-config><source><running/></source><filter type="subtree"><configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+  <service>
+  </service>
+</configure></filter></get-config></rpc>]]>]]>
+2021-01-08 21:24:37,003 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:37,004 INFO 192.168.1.138 "VPRN config" readed/filtered:
+2021-01-08 21:24:37,006 INFO 
+<?xml version="1.0" encoding="UTF-8"?><rpc-reply message-id="urn:uuid:cbf571b7-04d7-426c-ba53-c8caa0854664">
+    <data>
+        <configure>
+            <service>
+                <vprn>
+                    <service-name>1001</service-name>
+                    <customer>1</customer>
+                    <autonomous-system>65501</autonomous-system>
+                    <ecmp>64</ecmp>
+                    <route-distinguisher>65101:10</route-distinguisher>
+                    <auto-bind-tunnel>
+                        <resolution>any</resolution>
+                    </auto-bind-tunnel>
+                    <interface>
+                        <interface-name>myint</interface-name>
+                        <tunnel>true</tunnel>
+                        <ipv4>
+                            <addresses>
+                                <address>
+                                    <ipv4-address>10.10.10.2</ipv4-address>
+                                    <prefix-length>29</prefix-length>
+                                </address>
+                            </addresses>
+                        </ipv4>
+                    </interface>
+                </vprn>
+            </service>
+        </configure>
+    </data>
+</rpc-reply>
+2021-01-08 21:24:37,016 INFO [host 192.168.1.138 session-id 423] Requesting 'Lock'
+2021-01-08 21:24:37,105 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:11e0e77e-6e5d-4c02-8bbc-977135ff35af"><lock><target><running/></target></lock></rpc>]]>]]>
+2021-01-08 21:24:37,414 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:37,416 INFO [host 192.168.1.138 session-id 423] Requesting 'Lock'
+2021-01-08 21:24:37,516 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:c421a2cb-8fe1-48e6-bc5e-0666ff825a30"><lock><target><candidate/></target></lock></rpc>]]>]]>
+2021-01-08 21:24:37,881 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:37,882 INFO 192.168.1.138conection locked
+2021-01-08 21:24:37,893 INFO [host 192.168.1.138 session-id 423] Requesting 'EditConfig'
+2021-01-08 21:24:37,983 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:ba90ec85-d1da-462b-ac59-2b1e806e7ba9"><edit-config><target><candidate/></target><config>
+  <configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+    <policy-options>
+        <policy-statement operation="delete">
+            <name>default-bgp-accept</name>
+            <default-action>
+                <action-type>accept</action-type>
+            </default-action>
+        </policy-statement>
+    </policy-options>
+  </configure>
+</config></edit-config></rpc>]]>]]>
+2021-01-08 21:24:38,376 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:38,377 INFO [host 192.168.1.138 session-id 423] Requesting 'Commit'
+2021-01-08 21:24:38,477 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:fcebed3d-5371-4b6d-9735-eed571f0e644"><commit/></rpc>]]>]]>
+2021-01-08 21:24:38,925 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:38,926 INFO [host 192.168.1.138 session-id 423] Requesting 'Unlock'
+2021-01-08 21:24:39,027 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:6fee1bcc-e1ba-47f2-ba92-0cca58c31bbd"><unlock><target><candidate/></target></unlock></rpc>]]>]]>
+2021-01-08 21:24:39,343 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:39,344 INFO [host 192.168.1.138 session-id 423] Requesting 'Unlock'
+2021-01-08 21:24:39,444 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:12c3fd3f-d79c-46f3-81bc-8de906a4ba87"><unlock><target><running/></target></unlock></rpc>]]>]]>
+2021-01-08 21:24:39,767 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:39,768 INFO 192.168.1.138 "Default BGP pol." edited and committed
+2021-01-08 21:24:39,787 INFO [host 192.168.1.138 session-id 423] Requesting 'Lock'
+2021-01-08 21:24:39,868 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:7e432e67-cfe1-4849-a758-59b6c15d93d9"><lock><target><running/></target></lock></rpc>]]>]]>
+2021-01-08 21:24:40,136 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:40,137 INFO [host 192.168.1.138 session-id 423] Requesting 'Lock'
+2021-01-08 21:24:40,238 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:58c74451-faa5-413f-9de7-a6a47d198454"><lock><target><candidate/></target></lock></rpc>]]>]]>
+2021-01-08 21:24:40,542 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:40,543 INFO 192.168.1.138conection locked
+2021-01-08 21:24:40,545 INFO [host 192.168.1.138 session-id 423] Requesting 'EditConfig'
+2021-01-08 21:24:40,643 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:67d6eae0-df58-4691-9539-d121b7531a8b"><edit-config><target><candidate/></target><config>
+    <configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+        
+        <port operation="delete">
+            <port-id>1/1/c2</port-id>
+            
+            
+            
+        </port>
+        
+        <port operation="delete">
+            <port-id>1/1/c2/1</port-id>
+            
+            
+            
+        </port>
+        
+    </configure>
+</config></edit-config></rpc>]]>]]>
+2021-01-08 21:24:40,996 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:40,997 INFO [host 192.168.1.138 session-id 423] Requesting 'Commit'
+2021-01-08 21:24:41,098 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:68376523-0766-49c8-9ecb-61b19cf8ebfe"><commit/></rpc>]]>]]>
+2021-01-08 21:24:41,518 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:41,519 INFO [host 192.168.1.138 session-id 423] Requesting 'Unlock'
+2021-01-08 21:24:41,620 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:17c77233-a366-4707-9c7f-b12eb0302ae2"><unlock><target><candidate/></target></unlock></rpc>]]>]]>
+2021-01-08 21:24:41,913 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:41,914 INFO [host 192.168.1.138 session-id 423] Requesting 'Unlock'
+2021-01-08 21:24:42,015 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:90cbd43d-7124-472a-9018-078a6ebd6097"><unlock><target><running/></target></unlock></rpc>]]>]]>
+2021-01-08 21:24:42,341 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:42,342 INFO 192.168.1.138 "PORT DELETE config" edited and committed
+2021-01-08 21:24:42,344 INFO [host 192.168.1.138 session-id 423] Requesting 'GetConfig'
+2021-01-08 21:24:42,442 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:d08aebd9-6db9-4066-b510-cf63b39e7ab4"><get-config><source><running/></source><filter type="subtree"><configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+  <port>
+  </port>
+</configure></filter></get-config></rpc>]]>]]>
+2021-01-08 21:24:42,748 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:42,750 INFO 192.168.1.138 "PORT config" readed/filtered:
+2021-01-08 21:24:42,751 INFO 
+<?xml version="1.0" encoding="UTF-8"?><rpc-reply message-id="urn:uuid:d08aebd9-6db9-4066-b510-cf63b39e7ab4">
+    <data>
+        <configure>
+            <port>
+                <port-id>1/1/c1</port-id>
+                <admin-state>enable</admin-state>
+                <connector>
+                    <breakout>c1-100g</breakout>
+                </connector>
+            </port>
+            <port>
+                <port-id>1/1/c1/1</port-id>
+                <admin-state>enable</admin-state>
+            </port>
+            <port>
+                <port-id>1/1/c3</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c4</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c5</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c6</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c7</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c8</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c9</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c10</port-id>
+                <admin-state>enable</admin-state>
+            </port>
+            <port>
+                <port-id>1/1/c11</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c12</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c13</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c14</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c15</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c16</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c17</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c18</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c19</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c20</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c21</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c22</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c23</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c24</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c25</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c26</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c27</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c28</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c29</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c30</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c31</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c32</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c33</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c34</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c35</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c36</port-id>
+            </port>
+        </configure>
+    </data>
+</rpc-reply>
+2021-01-08 21:24:42,763 INFO [host 192.168.1.138 session-id 423] Requesting 'CloseSession'
+2021-01-08 21:24:42,850 INFO [host 192.168.1.138 session-id 423] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:dc0a8e20-1a9e-4046-80a0-b2a9172b2aaf"><close-session/></rpc>]]>]]>
+2021-01-08 21:24:43,115 INFO [host 192.168.1.138 session-id 423] Received message from host
+2021-01-08 21:24:43,529 INFO Connected (version 2.0, client OpenSSH_3.5p1)
+2021-01-08 21:24:44,335 INFO Authentication (publickey) failed.
+2021-01-08 21:24:44,693 INFO Authentication (password) successful!
+2021-01-08 21:24:44,972 INFO [host 192.168.1.139 session 0x1e0a9e7c970] Sending:
+<?xml version="1.0" encoding="UTF-8"?><hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><capabilities><capability>urn:ietf:params:netconf:base:1.0</capability></capabilities></hello>]]>]]>
+2021-01-08 21:24:45,084 INFO [host 192.168.1.139 session 0x1e0a9e7c970] Received message from host
+2021-01-08 21:24:45,087 INFO [host 192.168.1.139 session-id 297] initialized: session-id=297 | server_capabilities=<dict_keyiterator object at 0x000001E0A9E93810>
+2021-01-08 21:24:45,089 INFO [host 192.168.1.139 session-id 297] Requesting 'Lock'
+2021-01-08 21:24:45,188 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:1fa28c75-9d98-47af-8b91-81712bff25ea"><lock><target><running/></target></lock></rpc>]]>]]>
+2021-01-08 21:24:45,463 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:45,464 INFO [host 192.168.1.139 session-id 297] Requesting 'Lock'
+2021-01-08 21:24:45,565 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:b218ff55-b7a9-4c96-9cf2-0259f203ec1a"><lock><target><candidate/></target></lock></rpc>]]>]]>
+2021-01-08 21:24:45,913 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:45,914 INFO 192.168.1.139conection locked
+2021-01-08 21:24:45,916 INFO [host 192.168.1.139 session-id 297] Requesting 'EditConfig'
+2021-01-08 21:24:46,015 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:6f41e068-6c6c-4593-902a-50d3cc10c0b8"><edit-config><target><candidate/></target><config>
+    <configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+        <service>
+            
+            <vprn operation="delete">
+                <service-name>1005</service-name>
+                <customer>1</customer>
+                
+                
+                
+                
+                
+                
+                <interface operation="delete">
+                    <interface-name>to_sr2</interface-name>
+                    
+                    
+                    
+                    
+                </interface>
+                
+                <interface operation="delete">
+                    <interface-name>lo0</interface-name>
+                    
+                    
+                    
+                    
+                </interface>
+                
+                
+            </vprn>
+            
+        </service>
+    </configure>
+</config></edit-config></rpc>]]>]]>
+2021-01-08 21:24:46,283 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:46,284 INFO [host 192.168.1.139 session-id 297] Requesting 'Commit'
+2021-01-08 21:24:46,385 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:4ef7b495-72d1-49e3-9bf1-3e0b5b76f31f"><commit/></rpc>]]>]]>
+2021-01-08 21:24:46,805 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:46,807 INFO [host 192.168.1.139 session-id 297] Requesting 'Unlock'
+2021-01-08 21:24:46,907 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:4a1ba04b-a4c8-49fc-98ed-fba6e000ae1e"><unlock><target><candidate/></target></unlock></rpc>]]>]]>
+2021-01-08 21:24:47,196 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:47,197 INFO [host 192.168.1.139 session-id 297] Requesting 'Unlock'
+2021-01-08 21:24:47,296 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:26f6976a-4f59-4b72-a40e-1205bbbf0abb"><unlock><target><running/></target></unlock></rpc>]]>]]>
+2021-01-08 21:24:47,562 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:47,563 INFO 192.168.1.139 "VPRN 1005 DELETE" edited and committed
+2021-01-08 21:24:47,565 INFO [host 192.168.1.139 session-id 297] Requesting 'GetConfig'
+2021-01-08 21:24:47,664 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:277b7650-4a8e-4132-acbe-2f928ab52d21"><get-config><source><running/></source><filter type="subtree"><configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+  <service>
+  </service>
+</configure></filter></get-config></rpc>]]>]]>
+2021-01-08 21:24:47,929 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:47,929 INFO 192.168.1.139 "VPRN config" readed/filtered:
+2021-01-08 21:24:47,932 INFO 
+<?xml version="1.0" encoding="UTF-8"?><rpc-reply message-id="urn:uuid:277b7650-4a8e-4132-acbe-2f928ab52d21">
+    <data>
+    </data>
+</rpc-reply>
+2021-01-08 21:24:47,942 INFO [host 192.168.1.139 session-id 297] Requesting 'Lock'
+2021-01-08 21:24:48,030 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:5749a605-5b51-4613-8800-fb06e492c007"><lock><target><running/></target></lock></rpc>]]>]]>
+2021-01-08 21:24:48,297 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:48,298 INFO [host 192.168.1.139 session-id 297] Requesting 'Lock'
+2021-01-08 21:24:48,397 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:d5fa37fa-6f47-4419-97f1-4e966ab77f68"><lock><target><candidate/></target></lock></rpc>]]>]]>
+2021-01-08 21:24:48,680 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:48,681 INFO 192.168.1.139conection locked
+2021-01-08 21:24:48,683 INFO [host 192.168.1.139 session-id 297] Requesting 'EditConfig'
+2021-01-08 21:24:48,781 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:1d34fdb9-3e16-4a80-a1a7-55e933c070c7"><edit-config><target><candidate/></target><config>
+  <configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+    <policy-options>
+        <policy-statement operation="delete">
+            <name>default-bgp-accept</name>
+            <default-action>
+                <action-type>accept</action-type>
+            </default-action>
+        </policy-statement>
+    </policy-options>
+  </configure>
+</config></edit-config></rpc>]]>]]>
+2021-01-08 21:24:49,088 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:49,090 INFO [host 192.168.1.139 session-id 297] Requesting 'Commit'
+2021-01-08 21:24:49,189 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:2bca108e-300f-43e0-b4d2-31220e0329e8"><commit/></rpc>]]>]]>
+2021-01-08 21:24:49,651 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:49,652 INFO [host 192.168.1.139 session-id 297] Requesting 'Unlock'
+2021-01-08 21:24:49,753 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:792702f6-83b5-46d7-a001-11dad1baab92"><unlock><target><candidate/></target></unlock></rpc>]]>]]>
+2021-01-08 21:24:50,386 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:50,387 INFO [host 192.168.1.139 session-id 297] Requesting 'Unlock'
+2021-01-08 21:24:50,488 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:dafd60a1-8c55-48a5-8357-c6e83ec58d20"><unlock><target><running/></target></unlock></rpc>]]>]]>
+2021-01-08 21:24:50,777 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:50,778 INFO 192.168.1.139 "Default BGP pol." edited and committed
+2021-01-08 21:24:50,780 INFO [host 192.168.1.139 session-id 297] Requesting 'Lock'
+2021-01-08 21:24:50,879 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:c8d69698-7924-4cfe-9b8a-85bc91c745e3"><lock><target><running/></target></lock></rpc>]]>]]>
+2021-01-08 21:24:51,173 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:51,174 INFO [host 192.168.1.139 session-id 297] Requesting 'Lock'
+2021-01-08 21:24:51,275 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:df3bfcd6-d132-44d0-9346-890fc9785f92"><lock><target><candidate/></target></lock></rpc>]]>]]>
+2021-01-08 21:24:51,552 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:51,553 INFO 192.168.1.139conection locked
+2021-01-08 21:24:51,555 INFO [host 192.168.1.139 session-id 297] Requesting 'EditConfig'
+2021-01-08 21:24:51,653 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:68ac27fa-4eca-4b4d-bf70-bedfbf7399f9"><edit-config><target><candidate/></target><config>
+    <configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+        
+        <port operation="delete">
+            <port-id>1/1/c2</port-id>
+            
+            
+            
+        </port>
+        
+        <port operation="delete">
+            <port-id>1/1/c2/1</port-id>
+            
+            
+            
+        </port>
+        
+    </configure>
+</config></edit-config></rpc>]]>]]>
+2021-01-08 21:24:51,922 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:51,923 INFO [host 192.168.1.139 session-id 297] Requesting 'Commit'
+2021-01-08 21:24:52,024 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:537ed452-33dd-4dfb-b9f9-ddd71556fb03"><commit/></rpc>]]>]]>
+2021-01-08 21:24:52,419 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:52,420 INFO [host 192.168.1.139 session-id 297] Requesting 'Unlock'
+2021-01-08 21:24:52,520 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:a1ebeb2c-a120-4d76-b93c-e1503898c666"><unlock><target><candidate/></target></unlock></rpc>]]>]]>
+2021-01-08 21:24:52,659 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:52,660 INFO [host 192.168.1.139 session-id 297] Requesting 'Unlock'
+2021-01-08 21:24:52,759 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:1f7dcf95-eb83-4483-9ece-ed622e1cf3ce"><unlock><target><running/></target></unlock></rpc>]]>]]>
+2021-01-08 21:24:53,038 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:53,039 INFO 192.168.1.139 "PORT DELETE config" edited and committed
+2021-01-08 21:24:53,041 INFO [host 192.168.1.139 session-id 297] Requesting 'GetConfig'
+2021-01-08 21:24:53,139 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:111e824b-01a4-41e5-a6d3-6adb7073aed8"><get-config><source><running/></source><filter type="subtree"><configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+  <port>
+  </port>
+</configure></filter></get-config></rpc>]]>]]>
+2021-01-08 21:24:53,533 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:24:53,535 INFO 192.168.1.139 "PORT config" readed/filtered:
+2021-01-08 21:24:53,537 INFO 
+<?xml version="1.0" encoding="UTF-8"?><rpc-reply message-id="urn:uuid:111e824b-01a4-41e5-a6d3-6adb7073aed8">
+    <data>
+        <configure>
+            <port>
+                <port-id>1/1/c1</port-id>
+                <admin-state>enable</admin-state>
+                <connector>
+                    <breakout>c1-100g</breakout>
+                </connector>
+            </port>
+            <port>
+                <port-id>1/1/c1/1</port-id>
+                <admin-state>enable</admin-state>
+            </port>
+            <port>
+                <port-id>1/1/c3</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c4</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c5</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c6</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c7</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c8</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c9</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c10</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c11</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c12</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c13</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c14</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c15</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c16</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c17</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c18</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c19</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c20</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c21</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c22</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c23</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c24</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c25</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c26</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c27</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c28</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c29</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c30</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c31</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c32</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c33</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c34</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c35</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c36</port-id>
+            </port>
+        </configure>
+    </data>
+</rpc-reply>
+2021-01-08 21:24:53,547 INFO [host 192.168.1.139 session-id 297] Requesting 'CloseSession'
+2021-01-08 21:24:53,639 INFO [host 192.168.1.139 session-id 297] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:f25299e2-b0bb-4d26-8109-1bb2fe397225"><close-session/></rpc>]]>]]>
+2021-01-08 21:24:53,983 INFO [host 192.168.1.139 session-id 297] Received message from host
+2021-01-08 21:25:18,085 INFO Connected (version 2.0, client OpenSSH_3.5p1)
+2021-01-08 21:25:18,731 INFO Authentication (publickey) failed.
+2021-01-08 21:25:19,069 INFO Authentication (password) successful!
+2021-01-08 21:25:19,290 INFO [host 192.168.1.138 session 0x25fd5a5cf70] Sending:
+<?xml version="1.0" encoding="UTF-8"?><hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><capabilities><capability>urn:ietf:params:netconf:base:1.0</capability></capabilities></hello>]]>]]>
+2021-01-08 21:25:19,509 INFO [host 192.168.1.138 session 0x25fd5a5cf70] Received message from host
+2021-01-08 21:25:19,513 INFO [host 192.168.1.138 session-id 424] initialized: session-id=424 | server_capabilities=<dict_keyiterator object at 0x0000025FD5B3E220>
+2021-01-08 21:25:19,526 INFO [host 192.168.1.138 session-id 424] Requesting 'Lock'
+2021-01-08 21:25:19,613 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:0f30f9a9-83fd-46c1-b493-aa7fcb912edf"><lock><target><running/></target></lock></rpc>]]>]]>
+2021-01-08 21:25:19,873 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:19,874 INFO [host 192.168.1.138 session-id 424] Requesting 'Lock'
+2021-01-08 21:25:19,974 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:2be4ca89-9bc4-4fa6-a802-806726e70a77"><lock><target><candidate/></target></lock></rpc>]]>]]>
+2021-01-08 21:25:20,248 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:20,249 INFO 192.168.1.138conection locked
+2021-01-08 21:25:20,251 INFO [host 192.168.1.138 session-id 424] Requesting 'EditConfig'
+2021-01-08 21:25:20,349 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:5467bff9-05c4-4679-9f53-1968b6929190"><edit-config><target><candidate/></target><config>
+    <configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+        
+        <port operation="create">
+            <port-id>1/1/c2</port-id>
+            
+            <admin-state>enable</admin-state>
+            
+            
+            <connector>
+                <breakout>c1-100g</breakout>
+            </connector>
+            
+            
+        </port>
+        
+        <port operation="create">
+            <port-id>1/1/c2/1</port-id>
+            
+            <admin-state>enable</admin-state>
+            
+            
+            
+            <ethernet>
+                
+                <mode>access</mode>
+                
+                
+            </ethernet>
+            
+        </port>
+        
+    </configure>
+</config></edit-config></rpc>]]>]]>
+2021-01-08 21:25:20,641 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:20,642 INFO [host 192.168.1.138 session-id 424] Requesting 'Commit'
+2021-01-08 21:25:20,742 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:017fb05d-9fdf-4b72-a885-8db625d87273"><commit/></rpc>]]>]]>
+2021-01-08 21:25:21,184 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:21,185 INFO [host 192.168.1.138 session-id 424] Requesting 'Unlock'
+2021-01-08 21:25:21,286 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:cbd8ad54-61e1-440a-a7d6-140efe655fce"><unlock><target><candidate/></target></unlock></rpc>]]>]]>
+2021-01-08 21:25:21,562 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:21,563 INFO [host 192.168.1.138 session-id 424] Requesting 'Unlock'
+2021-01-08 21:25:21,663 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:5279431d-5903-4f27-ad05-44be4afc8113"><unlock><target><running/></target></unlock></rpc>]]>]]>
+2021-01-08 21:25:21,930 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:21,931 INFO 192.168.1.138 "PORT create config" edited and committed
+2021-01-08 21:25:21,933 INFO [host 192.168.1.138 session-id 424] Requesting 'Get'
+2021-01-08 21:25:22,032 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:a66258b4-5e22-4986-ad57-039db464441d"><get><filter type="subtree"><configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+  <port>
+  </port>
+</configure></filter></get></rpc>]]>]]>
+2021-01-08 21:25:22,321 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:22,323 INFO 192.168.1.138 "PORT config" readed/filtered:
+2021-01-08 21:25:22,323 INFO 
+<?xml version="1.0" encoding="UTF-8"?><rpc-reply message-id="urn:uuid:a66258b4-5e22-4986-ad57-039db464441d">
+    <data>
+        <configure>
+            <port>
+                <port-id>1/1/c1</port-id>
+                <admin-state>enable</admin-state>
+                <connector>
+                    <breakout>c1-100g</breakout>
+                </connector>
+            </port>
+            <port>
+                <port-id>1/1/c1/1</port-id>
+                <admin-state>enable</admin-state>
+            </port>
+            <port>
+                <port-id>1/1/c2</port-id>
+                <admin-state>enable</admin-state>
+                <connector>
+                    <breakout>c1-100g</breakout>
+                </connector>
+            </port>
+            <port>
+                <port-id>1/1/c2/1</port-id>
+                <admin-state>enable</admin-state>
+                <ethernet>
+                    <mode>access</mode>
+                </ethernet>
+            </port>
+            <port>
+                <port-id>1/1/c3</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c4</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c5</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c6</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c7</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c8</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c9</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c10</port-id>
+                <admin-state>enable</admin-state>
+            </port>
+            <port>
+                <port-id>1/1/c11</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c12</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c13</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c14</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c15</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c16</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c17</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c18</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c19</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c20</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c21</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c22</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c23</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c24</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c25</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c26</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c27</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c28</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c29</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c30</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c31</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c32</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c33</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c34</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c35</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c36</port-id>
+            </port>
+        </configure>
+    </data>
+</rpc-reply>
+2021-01-08 21:25:22,335 INFO [host 192.168.1.138 session-id 424] Requesting 'Lock'
+2021-01-08 21:25:22,422 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:b5df5abc-f208-4e38-9c75-69d81a2635cf"><lock><target><running/></target></lock></rpc>]]>]]>
+2021-01-08 21:25:22,690 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:22,691 INFO [host 192.168.1.138 session-id 424] Requesting 'Lock'
+2021-01-08 21:25:22,791 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:49c9dbf2-8d24-445a-88ea-3a4d503f8a79"><lock><target><candidate/></target></lock></rpc>]]>]]>
+2021-01-08 21:25:23,070 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:23,071 INFO 192.168.1.138conection locked
+2021-01-08 21:25:23,073 INFO [host 192.168.1.138 session-id 424] Requesting 'EditConfig'
+2021-01-08 21:25:23,170 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:1af23f3e-6d9a-471e-ac08-f7a60edbdc0f"><edit-config><target><candidate/></target><config>
+  <configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+    <policy-options>
+        <policy-statement operation="create">
+            <name>default-bgp-accept</name>
+            <default-action>
+                <action-type>accept</action-type>
+            </default-action>
+        </policy-statement>
+    </policy-options>
+  </configure>
+</config></edit-config></rpc>]]>]]>
+2021-01-08 21:25:23,434 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:23,436 INFO [host 192.168.1.138 session-id 424] Requesting 'Commit'
+2021-01-08 21:25:23,535 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:9c78cbe3-e6c3-4980-a523-fcbb937c186f"><commit/></rpc>]]>]]>
+2021-01-08 21:25:23,945 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:23,946 INFO [host 192.168.1.138 session-id 424] Requesting 'Unlock'
+2021-01-08 21:25:24,046 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:1aded23f-ee3f-4040-994b-e3d45ed25fd8"><unlock><target><candidate/></target></unlock></rpc>]]>]]>
+2021-01-08 21:25:24,313 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:24,314 INFO [host 192.168.1.138 session-id 424] Requesting 'Unlock'
+2021-01-08 21:25:24,415 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:8c855edb-b1a0-4cbf-94a6-2728219f252f"><unlock><target><running/></target></unlock></rpc>]]>]]>
+2021-01-08 21:25:24,719 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:24,720 INFO 192.168.1.138 "Default BGP pol." edited and committed
+2021-01-08 21:25:24,739 INFO [host 192.168.1.138 session-id 424] Requesting 'Lock'
+2021-01-08 21:25:24,820 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:ef532b33-0e33-42a4-a944-44a692586785"><lock><target><running/></target></lock></rpc>]]>]]>
+2021-01-08 21:25:25,107 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:25,108 INFO [host 192.168.1.138 session-id 424] Requesting 'Lock'
+2021-01-08 21:25:25,208 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:e3d44756-eba2-4b0b-9883-d201ac576123"><lock><target><candidate/></target></lock></rpc>]]>]]>
+2021-01-08 21:25:25,513 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:25,513 INFO 192.168.1.138conection locked
+2021-01-08 21:25:25,516 INFO [host 192.168.1.138 session-id 424] Requesting 'EditConfig'
+2021-01-08 21:25:25,613 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:d0768470-e0ea-4e93-a48e-530d0a3ba881"><edit-config><target><candidate/></target><config>
+    <configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+        <service>
+            
+            <vprn operation="create">
+                <service-name>1005</service-name>
+                <customer>1</customer>
+                
+                <admin-state>enable</admin-state>
+                
+                
+                <autonomous-system>65101</autonomous-system>
+                
+                
+                <ecmp>64</ecmp>
+                
+                
+                <route-distinguisher>65101:1005</route-distinguisher>
+                
+                
+                <auto-bind-tunnel>
+                    <resolution>any</resolution>
+                </auto-bind-tunnel>
+                
+                
+                <interface operation="create">
+                    <interface-name>to_sr2</interface-name>
+                    
+                    
+                    <admin-state>enable</admin-state>
+                    
+                    
+                    <ipv4>
+                        <primary>
+                            <address>10.0.0.0</address>
+                            <prefix-length>31</prefix-length>
+                        </primary>
+                    </ipv4>
+                    
+                    
+                    <sap>
+                    <sap-id>1/1/c2/1</sap-id>
+                    </sap>                   
+                    
+                </interface>
+                
+                <interface operation="create">
+                    <interface-name>lo0</interface-name>
+                    
+                    <loopback>true</loopback>
+                    
+                    
+                    <admin-state>enable</admin-state>
+                    
+                    
+                    <ipv4>
+                        <primary>
+                            <address>1.1.1.1</address>
+                            <prefix-length>32</prefix-length>
+                        </primary>
+                    </ipv4>
+                    
+                    
+                </interface>
+                
+                
+                <bgp>
+                    
+                    <admin-state>enable</admin-state>
+                    
+                    
+                    <import>
+                        <policy>default-bgp-accept</policy>
+                    </import>
+                    
+                    
+                    <export>
+                        <policy>default-bgp-accept</policy>
+                    </export>
+                    
+                    
+                    <group>
+                        <group-name>to_SR2_1005</group-name>
+                        <type>external</type>
+                        <family>
+                            <ipv4>true</ipv4>
+                        </family>
+                        <local-as>
+                            <as-number>65101</as-number>
+                        </local-as>
+                    </group>
+                    
+                    
+                    <neighbor>
+                        <ip-address>10.0.0.1</ip-address>
+                        <group>to_SR2_1005</group>
+                        <peer-as>65102</peer-as>
+                    </neighbor>
+                    
+                </bgp>
+                
+            </vprn>
+            
+        </service>
+    </configure>
+</config></edit-config></rpc>]]>]]>
+2021-01-08 21:25:25,893 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:25,894 INFO [host 192.168.1.138 session-id 424] Requesting 'Commit'
+2021-01-08 21:25:25,994 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:1a569633-63f6-4c1f-9d59-e64c15dc6643"><commit/></rpc>]]>]]>
+2021-01-08 21:25:26,449 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:26,450 INFO [host 192.168.1.138 session-id 424] Requesting 'Unlock'
+2021-01-08 21:25:26,549 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:6905d947-4ea9-47a0-848c-3d000ab8e2b6"><unlock><target><candidate/></target></unlock></rpc>]]>]]>
+2021-01-08 21:25:26,816 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:26,817 INFO [host 192.168.1.138 session-id 424] Requesting 'Unlock'
+2021-01-08 21:25:26,917 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:6f575bc2-5dcb-4421-9979-d840dcf7b36a"><unlock><target><running/></target></unlock></rpc>]]>]]>
+2021-01-08 21:25:27,195 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:27,196 INFO 192.168.1.138 "VPRN 1005 CREATE" edited and committed
+2021-01-08 21:25:27,198 INFO [host 192.168.1.138 session-id 424] Requesting 'Get'
+2021-01-08 21:25:27,296 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:5b05c8e2-6ffa-4ca9-8f24-564cb333a70b"><get><filter type="subtree"><configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+  <service>
+  </service>
+</configure></filter></get></rpc>]]>]]>
+2021-01-08 21:25:27,615 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:27,617 INFO 192.168.1.138 "VPRN config" readed/filtered:
+2021-01-08 21:25:27,618 INFO 
+<?xml version="1.0" encoding="UTF-8"?><rpc-reply message-id="urn:uuid:5b05c8e2-6ffa-4ca9-8f24-564cb333a70b">
+    <data>
+        <configure>
+            <service>
+                <vprn>
+                    <service-name>1001</service-name>
+                    <customer>1</customer>
+                    <autonomous-system>65501</autonomous-system>
+                    <ecmp>64</ecmp>
+                    <route-distinguisher>65101:10</route-distinguisher>
+                    <auto-bind-tunnel>
+                        <resolution>any</resolution>
+                    </auto-bind-tunnel>
+                    <interface>
+                        <interface-name>myint</interface-name>
+                        <tunnel>true</tunnel>
+                        <ipv4>
+                            <addresses>
+                                <address>
+                                    <ipv4-address>10.10.10.2</ipv4-address>
+                                    <prefix-length>29</prefix-length>
+                                </address>
+                            </addresses>
+                        </ipv4>
+                    </interface>
+                </vprn>
+                <vprn>
+                    <service-name>1005</service-name>
+                    <admin-state>enable</admin-state>
+                    <customer>1</customer>
+                    <autonomous-system>65101</autonomous-system>
+                    <ecmp>64</ecmp>
+                    <route-distinguisher>65101:1005</route-distinguisher>
+                    <auto-bind-tunnel>
+                        <resolution>any</resolution>
+                    </auto-bind-tunnel>
+                    <bgp>
+                        <admin-state>enable</admin-state>
+                        <import>
+                            <policy>default-bgp-accept</policy>
+                        </import>
+                        <export>
+                            <policy>default-bgp-accept</policy>
+                        </export>
+                        <group>
+                            <group-name>to_SR2_1005</group-name>
+                            <type>external</type>
+                            <family>
+                                <ipv4>true</ipv4>
+                            </family>
+                            <local-as>
+                                <as-number>65101</as-number>
+                            </local-as>
+                        </group>
+                        <neighbor>
+                            <ip-address>10.0.0.1</ip-address>
+                            <group>to_SR2_1005</group>
+                            <peer-as>65102</peer-as>
+                        </neighbor>
+                    </bgp>
+                    <interface>
+                        <interface-name>lo0</interface-name>
+                        <admin-state>enable</admin-state>
+                        <loopback>true</loopback>
+                        <ipv4>
+                            <primary>
+                                <address>1.1.1.1</address>
+                                <prefix-length>32</prefix-length>
+                            </primary>
+                        </ipv4>
+                    </interface>
+                    <interface>
+                        <interface-name>to_sr2</interface-name>
+                        <admin-state>enable</admin-state>
+                        <ipv4>
+                            <primary>
+                                <address>10.0.0.0</address>
+                                <prefix-length>31</prefix-length>
+                            </primary>
+                        </ipv4>
+                        <sap>
+                            <sap-id>1/1/c2/1</sap-id>
+                        </sap>
+                    </interface>
+                </vprn>
+            </service>
+        </configure>
+    </data>
+</rpc-reply>
+2021-01-08 21:25:27,631 INFO [host 192.168.1.138 session-id 424] Requesting 'CloseSession'
+2021-01-08 21:25:27,717 INFO [host 192.168.1.138 session-id 424] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:5b9bb614-acad-4c1a-b7de-6ff586950a31"><close-session/></rpc>]]>]]>
+2021-01-08 21:25:27,994 INFO [host 192.168.1.138 session-id 424] Received message from host
+2021-01-08 21:25:28,217 INFO Connected (version 2.0, client OpenSSH_3.5p1)
+2021-01-08 21:25:28,989 INFO Authentication (publickey) failed.
+2021-01-08 21:25:29,366 INFO Authentication (password) successful!
+2021-01-08 21:25:29,624 INFO [host 192.168.1.139 session 0x25fd5b58340] Sending:
+<?xml version="1.0" encoding="UTF-8"?><hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><capabilities><capability>urn:ietf:params:netconf:base:1.0</capability></capabilities></hello>]]>]]>
+2021-01-08 21:25:29,777 INFO [host 192.168.1.139 session 0x25fd5b58340] Received message from host
+2021-01-08 21:25:29,780 INFO [host 192.168.1.139 session-id 298] initialized: session-id=298 | server_capabilities=<dict_keyiterator object at 0x0000025FD5B689F0>
+2021-01-08 21:25:29,781 INFO [host 192.168.1.139 session-id 298] Requesting 'Lock'
+2021-01-08 21:25:29,881 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:b87a552a-06e2-4e16-81a2-c3d8843d99da"><lock><target><running/></target></lock></rpc>]]>]]>
+2021-01-08 21:25:30,158 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:30,159 INFO [host 192.168.1.139 session-id 298] Requesting 'Lock'
+2021-01-08 21:25:30,258 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:6a4d95cb-41db-408c-a698-f4d462a02fa4"><lock><target><candidate/></target></lock></rpc>]]>]]>
+2021-01-08 21:25:30,525 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:30,527 INFO 192.168.1.139conection locked
+2021-01-08 21:25:30,529 INFO [host 192.168.1.139 session-id 298] Requesting 'EditConfig'
+2021-01-08 21:25:30,627 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:947a6630-0e3d-44af-b229-0fc08a6cb47f"><edit-config><target><candidate/></target><config>
+    <configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+        
+        <port operation="create">
+            <port-id>1/1/c2</port-id>
+            
+            <admin-state>enable</admin-state>
+            
+            
+            <connector>
+                <breakout>c1-100g</breakout>
+            </connector>
+            
+            
+        </port>
+        
+        <port operation="create">
+            <port-id>1/1/c2/1</port-id>
+            
+            <admin-state>enable</admin-state>
+            
+            
+            
+            <ethernet>
+                
+                <mode>access</mode>
+                
+                
+            </ethernet>
+            
+        </port>
+        
+    </configure>
+</config></edit-config></rpc>]]>]]>
+2021-01-08 21:25:30,894 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:30,895 INFO [host 192.168.1.139 session-id 298] Requesting 'Commit'
+2021-01-08 21:25:30,995 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:af6cb6f4-afac-4a88-a6e0-6c51cafe4c6a"><commit/></rpc>]]>]]>
+2021-01-08 21:25:31,490 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:31,491 INFO [host 192.168.1.139 session-id 298] Requesting 'Unlock'
+2021-01-08 21:25:31,591 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:d44f7c7a-9898-47c3-82a7-45c10071ed03"><unlock><target><candidate/></target></unlock></rpc>]]>]]>
+2021-01-08 21:25:31,892 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:31,894 INFO [host 192.168.1.139 session-id 298] Requesting 'Unlock'
+2021-01-08 21:25:31,993 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:0dc9f4cb-d0ea-4574-9b4b-c7b60f794fa1"><unlock><target><running/></target></unlock></rpc>]]>]]>
+2021-01-08 21:25:32,269 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:32,270 INFO 192.168.1.139 "PORT create config" edited and committed
+2021-01-08 21:25:32,271 INFO [host 192.168.1.139 session-id 298] Requesting 'Get'
+2021-01-08 21:25:32,371 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:44b3d14d-ca31-4685-bd3c-2c56c817f90a"><get><filter type="subtree"><configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+  <port>
+  </port>
+</configure></filter></get></rpc>]]>]]>
+2021-01-08 21:25:34,066 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:34,066 INFO 192.168.1.139 "PORT config" readed/filtered:
+2021-01-08 21:25:34,066 INFO 
+<?xml version="1.0" encoding="UTF-8"?><rpc-reply message-id="urn:uuid:44b3d14d-ca31-4685-bd3c-2c56c817f90a">
+    <data>
+        <configure>
+            <port>
+                <port-id>1/1/c1</port-id>
+                <admin-state>enable</admin-state>
+                <connector>
+                    <breakout>c1-100g</breakout>
+                </connector>
+            </port>
+            <port>
+                <port-id>1/1/c1/1</port-id>
+                <admin-state>enable</admin-state>
+            </port>
+            <port>
+                <port-id>1/1/c2</port-id>
+                <admin-state>enable</admin-state>
+                <connector>
+                    <breakout>c1-100g</breakout>
+                </connector>
+            </port>
+            <port>
+                <port-id>1/1/c2/1</port-id>
+                <admin-state>enable</admin-state>
+                <ethernet>
+                    <mode>access</mode>
+                </ethernet>
+            </port>
+            <port>
+                <port-id>1/1/c3</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c4</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c5</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c6</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c7</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c8</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c9</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c10</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c11</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c12</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c13</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c14</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c15</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c16</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c17</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c18</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c19</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c20</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c21</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c22</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c23</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c24</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c25</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c26</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c27</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c28</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c29</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c30</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c31</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c32</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c33</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c34</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c35</port-id>
+            </port>
+            <port>
+                <port-id>1/1/c36</port-id>
+            </port>
+        </configure>
+    </data>
+</rpc-reply>
+2021-01-08 21:25:34,081 INFO [host 192.168.1.139 session-id 298] Requesting 'Lock'
+2021-01-08 21:25:34,176 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:725a5c85-307c-48b6-b5d6-5c3e8dd7f9d0"><lock><target><running/></target></lock></rpc>]]>]]>
+2021-01-08 21:25:34,441 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:34,441 INFO [host 192.168.1.139 session-id 298] Requesting 'Lock'
+2021-01-08 21:25:34,541 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:93b7fa82-d6dd-4723-929d-47e55bf9bd11"><lock><target><candidate/></target></lock></rpc>]]>]]>
+2021-01-08 21:25:34,816 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:34,816 INFO 192.168.1.139conection locked
+2021-01-08 21:25:34,818 INFO [host 192.168.1.139 session-id 298] Requesting 'EditConfig'
+2021-01-08 21:25:34,916 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:1c1d9173-7af1-4845-8f03-588268f2fa4f"><edit-config><target><candidate/></target><config>
+  <configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+    <policy-options>
+        <policy-statement operation="create">
+            <name>default-bgp-accept</name>
+            <default-action>
+                <action-type>accept</action-type>
+            </default-action>
+        </policy-statement>
+    </policy-options>
+  </configure>
+</config></edit-config></rpc>]]>]]>
+2021-01-08 21:25:35,180 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:35,181 INFO [host 192.168.1.139 session-id 298] Requesting 'Commit'
+2021-01-08 21:25:35,281 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:e4ee79b1-e820-4595-b4aa-291a7ad212fa"><commit/></rpc>]]>]]>
+2021-01-08 21:25:35,692 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:35,693 INFO [host 192.168.1.139 session-id 298] Requesting 'Unlock'
+2021-01-08 21:25:35,793 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:a6ba9399-c495-4292-8fbf-10070a2c6c44"><unlock><target><candidate/></target></unlock></rpc>]]>]]>
+2021-01-08 21:25:36,054 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:36,055 INFO [host 192.168.1.139 session-id 298] Requesting 'Unlock'
+2021-01-08 21:25:36,155 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:39ac8164-e3a4-42c9-9b18-f033193e65aa"><unlock><target><running/></target></unlock></rpc>]]>]]>
+2021-01-08 21:25:36,436 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:36,437 INFO 192.168.1.139 "Default BGP pol." edited and committed
+2021-01-08 21:25:36,439 INFO [host 192.168.1.139 session-id 298] Requesting 'Lock'
+2021-01-08 21:25:36,537 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:0ba9bd69-8d04-4297-bc52-ae171d0df846"><lock><target><running/></target></lock></rpc>]]>]]>
+2021-01-08 21:25:36,833 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:36,834 INFO [host 192.168.1.139 session-id 298] Requesting 'Lock'
+2021-01-08 21:25:36,934 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:f7f6b4fd-efd2-4b42-b4a0-e785ee6dcfcf"><lock><target><candidate/></target></lock></rpc>]]>]]>
+2021-01-08 21:25:37,225 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:37,226 INFO 192.168.1.139conection locked
+2021-01-08 21:25:37,227 INFO [host 192.168.1.139 session-id 298] Requesting 'EditConfig'
+2021-01-08 21:25:37,326 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:e92f34b2-a404-4319-9b84-d5a5fa66030b"><edit-config><target><candidate/></target><config>
+    <configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+        <service>
+            
+            <vprn operation="create">
+                <service-name>1005</service-name>
+                <customer>1</customer>
+                
+                <admin-state>enable</admin-state>
+                
+                
+                <autonomous-system>65102</autonomous-system>
+                
+                
+                <ecmp>64</ecmp>
+                
+                
+                <route-distinguisher>65102:1005</route-distinguisher>
+                
+                
+                <auto-bind-tunnel>
+                    <resolution>any</resolution>
+                </auto-bind-tunnel>
+                
+                
+                <interface operation="create">
+                    <interface-name>to_sr1</interface-name>
+                    
+                    
+                    <admin-state>enable</admin-state>
+                    
+                    
+                    <ipv4>
+                        <primary>
+                            <address>10.0.0.1</address>
+                            <prefix-length>31</prefix-length>
+                        </primary>
+                    </ipv4>
+                    
+                    
+                    <sap>
+                    <sap-id>1/1/c2/1</sap-id>
+                    </sap>                   
+                    
+                </interface>
+                
+                <interface operation="create">
+                    <interface-name>lo0</interface-name>
+                    
+                    <loopback>true</loopback>
+                    
+                    
+                    <admin-state>enable</admin-state>
+                    
+                    
+                    <ipv4>
+                        <primary>
+                            <address>2.2.2.2</address>
+                            <prefix-length>32</prefix-length>
+                        </primary>
+                    </ipv4>
+                    
+                    
+                </interface>
+                
+                
+                <bgp>
+                    
+                    <admin-state>enable</admin-state>
+                    
+                    
+                    <import>
+                        <policy>default-bgp-accept</policy>
+                    </import>
+                    
+                    
+                    <export>
+                        <policy>default-bgp-accept</policy>
+                    </export>
+                    
+                    
+                    <group>
+                        <group-name>to_SR1_1005</group-name>
+                        <type>external</type>
+                        <family>
+                            <ipv4>true</ipv4>
+                        </family>
+                        <local-as>
+                            <as-number>65102</as-number>
+                        </local-as>
+                    </group>
+                    
+                    
+                    <neighbor>
+                        <ip-address>10.0.0.0</ip-address>
+                        <group>to_SR1_1005</group>
+                        <peer-as>65101</peer-as>
+                    </neighbor>
+                    
+                </bgp>
+                
+            </vprn>
+            
+        </service>
+    </configure>
+</config></edit-config></rpc>]]>]]>
+2021-01-08 21:25:37,594 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:37,595 INFO [host 192.168.1.139 session-id 298] Requesting 'Commit'
+2021-01-08 21:25:37,694 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:12e95ac5-61f8-4b58-97fd-046117378db9"><commit/></rpc>]]>]]>
+2021-01-08 21:25:38,125 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:38,126 INFO [host 192.168.1.139 session-id 298] Requesting 'Unlock'
+2021-01-08 21:25:38,226 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:8261bdcb-676f-4467-97bc-d7f207c7ea76"><unlock><target><candidate/></target></unlock></rpc>]]>]]>
+2021-01-08 21:25:38,528 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:38,529 INFO [host 192.168.1.139 session-id 298] Requesting 'Unlock'
+2021-01-08 21:25:38,629 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:fcd39bd0-2085-4bef-8359-6bc227b57130"><unlock><target><running/></target></unlock></rpc>]]>]]>
+2021-01-08 21:25:38,948 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:38,949 INFO 192.168.1.139 "VPRN 1005 CREATE" edited and committed
+2021-01-08 21:25:38,950 INFO [host 192.168.1.139 session-id 298] Requesting 'Get'
+2021-01-08 21:25:39,049 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:065937b4-3112-4f6b-890a-af329a22574b"><get><filter type="subtree"><configure xmlns="urn:nokia.com:sros:ns:yang:sr:conf">
+  <service>
+  </service>
+</configure></filter></get></rpc>]]>]]>
+2021-01-08 21:25:39,329 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:25:39,330 INFO 192.168.1.139 "VPRN config" readed/filtered:
+2021-01-08 21:25:39,331 INFO 
+<?xml version="1.0" encoding="UTF-8"?><rpc-reply message-id="urn:uuid:065937b4-3112-4f6b-890a-af329a22574b">
+    <data>
+        <configure>
+            <service>
+                <vprn>
+                    <service-name>1005</service-name>
+                    <admin-state>enable</admin-state>
+                    <customer>1</customer>
+                    <autonomous-system>65102</autonomous-system>
+                    <ecmp>64</ecmp>
+                    <route-distinguisher>65102:1005</route-distinguisher>
+                    <auto-bind-tunnel>
+                        <resolution>any</resolution>
+                    </auto-bind-tunnel>
+                    <bgp>
+                        <admin-state>enable</admin-state>
+                        <import>
+                            <policy>default-bgp-accept</policy>
+                        </import>
+                        <export>
+                            <policy>default-bgp-accept</policy>
+                        </export>
+                        <group>
+                            <group-name>to_SR1_1005</group-name>
+                            <type>external</type>
+                            <family>
+                                <ipv4>true</ipv4>
+                            </family>
+                            <local-as>
+                                <as-number>65102</as-number>
+                            </local-as>
+                        </group>
+                        <neighbor>
+                            <ip-address>10.0.0.0</ip-address>
+                            <group>to_SR1_1005</group>
+                            <peer-as>65101</peer-as>
+                        </neighbor>
+                    </bgp>
+                    <interface>
+                        <interface-name>lo0</interface-name>
+                        <admin-state>enable</admin-state>
+                        <loopback>true</loopback>
+                        <ipv4>
+                            <primary>
+                                <address>2.2.2.2</address>
+                                <prefix-length>32</prefix-length>
+                            </primary>
+                        </ipv4>
+                    </interface>
+                    <interface>
+                        <interface-name>to_sr1</interface-name>
+                        <admin-state>enable</admin-state>
+                        <ipv4>
+                            <primary>
+                                <address>10.0.0.1</address>
+                                <prefix-length>31</prefix-length>
+                            </primary>
+                        </ipv4>
+                        <sap>
+                            <sap-id>1/1/c2/1</sap-id>
+                        </sap>
+                    </interface>
+                </vprn>
+            </service>
+        </configure>
+    </data>
+</rpc-reply>
+2021-01-08 21:25:39,333 INFO [host 192.168.1.139 session-id 298] Requesting 'CloseSession'
+2021-01-08 21:25:39,430 INFO [host 192.168.1.139 session-id 298] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:8c51420e-cf34-4ef9-bd09-0129cff7c185"><close-session/></rpc>]]>]]>
+2021-01-08 21:25:39,702 INFO [host 192.168.1.139 session-id 298] Received message from host
+2021-01-08 21:28:56,571 INFO Connected (version 2.0, client OpenSSH_3.5p1)
+2021-01-08 21:28:57,390 INFO Authentication (publickey) failed.
+2021-01-08 21:28:57,733 INFO Authentication (password) successful!
+2021-01-08 21:28:57,974 INFO [host 192.168.1.138 session 0x1f8fb88cf70] Sending:
+<?xml version="1.0" encoding="UTF-8"?><hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><capabilities><capability>urn:ietf:params:netconf:base:1.0</capability></capabilities></hello>]]>]]>
+2021-01-08 21:28:58,199 INFO [host 192.168.1.138 session 0x1f8fb88cf70] Received message from host
+2021-01-08 21:28:58,202 INFO [host 192.168.1.138 session-id 425] initialized: session-id=425 | server_capabilities=<dict_keyiterator object at 0x000001F8FB96C3B0>
+2021-01-08 21:28:58,203 INFO [host 192.168.1.138 session-id 425] Requesting 'Get'
+2021-01-08 21:28:58,303 INFO [host 192.168.1.138 session-id 425] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:d3db49e2-e1ea-45aa-a981-5f84c649ae0c"><get><filter type="subtree"><state xmlns="urn:nokia.com:sros:ns:yang:sr:state">
+  <service>
+    <vprn>
+      <service-name>1005</service-name>
+        <route-table>
+          <unicast>
+              <ipv4>
+                <route>
+                </route>
+              </ipv4>
+          </unicast>
+        </route-table>
+    </vprn>
+  </service>
+</state></filter></get></rpc>]]>]]>
+2021-01-08 21:28:58,576 INFO [host 192.168.1.138 session-id 425] Received message from host
+2021-01-08 21:28:58,578 INFO 192.168.1.138 "VPRN ROUTE TABLE STATE" readed/filtered:
+2021-01-08 21:28:58,578 INFO 
+<?xml version="1.0" encoding="UTF-8"?><rpc-reply message-id="urn:uuid:d3db49e2-e1ea-45aa-a981-5f84c649ae0c">
+    <data>
+        <state>
+            <service>
+                <vprn>
+                    <service-name>1005</service-name>
+                    <route-table>
+                        <unicast>
+                            <ipv4>
+                                <route>
+                                    <ipv4-prefix>1.1.1.1/32</ipv4-prefix>
+                                    <age>212</age>
+                                    <instance>0</instance>
+                                    <flags/>
+                                    <preference>0</preference>
+                                    <protocol>local</protocol>
+                                    <nexthop>
+                                        <nexthop-index>0</nexthop-index>
+                                        <flags/>
+                                        <if-index>4</if-index>
+                                        <if-vrtr-id>31</if-vrtr-id>
+                                        <metric>0</metric>
+                                    </nexthop>
+                                </route>
+                                <route>
+                                    <ipv4-prefix>2.2.2.2/32</ipv4-prefix>
+                                    <age>152</age>
+                                    <instance>0</instance>
+                                    <flags/>
+                                    <preference>170</preference>
+                                    <protocol>bgp</protocol>
+                                    <nexthop>
+                                        <nexthop-index>0</nexthop-index>
+                                        <flags>nh-is-indirect</flags>
+                                        <metric>0</metric>
+                                        <nexthop-ip>10.0.0.1</nexthop-ip>
+                                        <resolving-nexthop>
+                                            <resolving-nexthop-index>0</resolving-nexthop-index>
+                                            <flags/>
+                                            <if-index>5</if-index>
+                                            <if-vrtr-id>31</if-vrtr-id>
+                                            <metric>0</metric>
+                                            <nexthop-ip>10.0.0.1</nexthop-ip>
+                                        </resolving-nexthop>
+                                    </nexthop>
+                                </route>
+                                <route>
+                                    <ipv4-prefix>10.0.0.0/31</ipv4-prefix>
+                                    <age>212</age>
+                                    <instance>0</instance>
+                                    <flags/>
+                                    <preference>0</preference>
+                                    <protocol>local</protocol>
+                                    <nexthop>
+                                        <nexthop-index>0</nexthop-index>
+                                        <flags/>
+                                        <if-index>5</if-index>
+                                        <if-vrtr-id>31</if-vrtr-id>
+                                        <metric>0</metric>
+                                    </nexthop>
+                                </route>
+                            </ipv4>
+                        </unicast>
+                    </route-table>
+                </vprn>
+            </service>
+        </state>
+    </data>
+</rpc-reply>
+2021-01-08 21:28:58,581 INFO [host 192.168.1.138 session-id 425] Requesting 'Get'
+2021-01-08 21:28:58,678 INFO [host 192.168.1.138 session-id 425] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:d4093d39-dc98-4bcc-a56a-4320048f6cb9"><get><filter type="subtree"><state xmlns="urn:nokia.com:sros:ns:yang:sr:state">
+  <service>
+    <vprn>
+      <service-name>1005</service-name>
+        <bgp>
+        </bgp>
+    </vprn>
+  </service>
+</state></filter></get></rpc>]]>]]>
+2021-01-08 21:28:58,932 INFO [host 192.168.1.138 session-id 425] Received message from host
+2021-01-08 21:28:58,934 INFO 192.168.1.138 "ROUTER BGP STATE" readed/filtered:
+2021-01-08 21:28:58,935 INFO 
+<?xml version="1.0" encoding="UTF-8"?><rpc-reply message-id="urn:uuid:d4093d39-dc98-4bcc-a56a-4320048f6cb9">
+    <data>
+        <state>
+            <service>
+                <vprn>
+                    <service-name>1005</service-name>
+                    <bgp>
+                        <convergence>
+                            <family>
+                                <family-type>ipv4</family-type>
+                                <up-peers-when-min-expired>0</up-peers-when-min-expired>
+                                <up-peers>1</up-peers>
+                                <converged-peers>1</converged-peers>
+                                <first-up-peer-time>0</first-up-peer-time>
+                                <last-up-peer-time>0</last-up-peer-time>
+                                <convergence-state>waiting</convergence-state>
+                                <convergence-time>0</convergence-time>
+                            </family>
+                            <family>
+                                <family-type>ipv6</family-type>
+                                <up-peers-when-min-expired>0</up-peers-when-min-expired>
+                                <up-peers>0</up-peers>
+                                <converged-peers>0</converged-peers>
+                                <first-up-peer-time>0</first-up-peer-time>
+                                <last-up-peer-time>0</last-up-peer-time>
+                                <convergence-state>waiting</convergence-state>
+                                <convergence-time>0</convergence-time>
+                            </family>
+                        </convergence>
+                        <statistics>
+                            <operational-state>Up</operational-state>
+                            <peer-groups>1</peer-groups>
+                            <peers>1</peers>
+                            <vpn-peer-groups>1</vpn-peer-groups>
+                            <vpn-peers>1</vpn-peers>
+                            <bgp-paths>8</bgp-paths>
+                            <path-memory>2840</path-memory>
+                            <routes-per-family>
+                                <ipv4>
+                                    <remote-routes>3</remote-routes>
+                                    <remote-active-routes>1</remote-active-routes>
+                                    <backup-routes>0</backup-routes>
+                                </ipv4>
+                                <ipv6>
+                                    <remote-routes>0</remote-routes>
+                                    <remote-active-routes>0</remote-active-routes>
+                                    <backup-routes>0</backup-routes>
+                                </ipv6>
+                                <route-flap-dampening>
+                                    <ipv4-ipv6>
+                                        <suppressed-routes>0</suppressed-routes>
+                                        <history-routes>0</history-routes>
+                                        <decay-routes>0</decay-routes>
+                                    </ipv4-ipv6>
+                                </route-flap-dampening>
+                                <mcast-ipv4>
+                                    <remote-routes>0</remote-routes>
+                                    <remote-active-routes>0</remote-active-routes>
+                                    <backup-routes>0</backup-routes>
+                                </mcast-ipv4>
+                                <mcast-ipv6>
+                                    <remote-routes>0</remote-routes>
+                                    <remote-active-routes>0</remote-active-routes>
+                                    <backup-routes>0</backup-routes>
+                                </mcast-ipv6>
+                                <flow-ipv4>
+                                    <remote-routes>0</remote-routes>
+                                    <remote-active-routes>0</remote-active-routes>
+                                    <backup-routes>0</backup-routes>
+                                </flow-ipv4>
+                                <flow-ipv6>
+                                    <remote-routes>0</remote-routes>
+                                    <remote-active-routes>0</remote-active-routes>
+                                    <backup-routes>0</backup-routes>
+                                </flow-ipv6>
+                                <label-ipv4>
+                                    <remote-routes>0</remote-routes>
+                                    <remote-active-routes>0</remote-active-routes>
+                                    <backup-routes>0</backup-routes>
+                                </label-ipv4>
+                            </routes-per-family>
+                        </statistics>
+                        <neighbor>
+                            <ip-address>10.0.0.1</ip-address>
+                            <statistics>
+                                <peer-port>179</peer-port>
+                                <local-port>54599</local-port>
+                                <session-state>Established</session-state>
+                                <last-state>Active</last-state>
+                                <last-event>recvOpen</last-event>
+                                <last-error>Unrecognized Error</last-error>
+                                <negotiated-family>IPv4</negotiated-family>
+                                <operational-local-address>10.0.0.0</operational-local-address>
+                                <operational-remote-address>10.0.0.1</operational-remote-address>
+                                <peer-identifier>255.0.0.0</peer-identifier>
+                                <established-transitions>1</established-transitions>
+                                <last-established-time>2021-01-08T18:24:33.2Z</last-established-time>
+                                <in-update-elapsed-time>1239076</in-update-elapsed-time>
+                                <hold-time-interval>90</hold-time-interval>
+                                <remaining-idle-hold-time>0</remaining-idle-hold-time>
+                                <keep-alive-interval>30</keep-alive-interval>
+                                <number-of-update-flaps>0</number-of-update-flaps>
+                                <update-errors>0</update-errors>
+                                <negotiated-capability>4byte_asn</negotiated-capability>
+                                <negotiated-capability>mpbgp</negotiated-capability>
+                                <negotiated-capability>rt_refresh</negotiated-capability>
+                                <received-paths>2</received-paths>
+                                <dynamically-configured>false</dynamically-configured>
+                                <convergence-recv-eor>ipv4</convergence-recv-eor>
+                                <convergence-sent-eor>ipv4</convergence-sent-eor>
+                                <convergence-exceeded-min-wait>unknown</convergence-exceeded-min-wait>
+                                <remote-family>
+                                    <family>IPv4</family>
+                                </remote-family>
+                                <local-capability>
+                                    <capability>4byte_asn</capability>
+                                    <capability>mpbgp</capability>
+                                    <capability>rt_refresh</capability>
+                                </local-capability>
+                                <remote-capability>
+                                    <capability>4byte_asn</capability>
+                                    <capability>mpbgp</capability>
+                                    <capability>rt_refresh</capability>
+                                </remote-capability>
+                                <family-prefix>
+                                    <ipv4>
+                                        <backup>0</backup>
+                                        <received>3</received>
+                                        <active>1</active>
+                                        <suppressed>0</suppressed>
+                                        <rejected>0</rejected>
+                                        <sent>3</sent>
+                                    </ipv4>
+                                    <ipv6>
+                                        <backup>0</backup>
+                                        <received>0</received>
+                                        <active>0</active>
+                                        <suppressed>0</suppressed>
+                                        <rejected>0</rejected>
+                                        <sent>0</sent>
+                                    </ipv6>
+                                    <mcast-ipv4>
+                                        <backup>0</backup>
+                                        <received>0</received>
+                                        <active>0</active>
+                                        <suppressed>0</suppressed>
+                                        <rejected>0</rejected>
+                                        <sent>0</sent>
+                                    </mcast-ipv4>
+                                    <mcast-ipv6>
+                                        <backup>0</backup>
+                                        <received>0</received>
+                                        <active>0</active>
+                                        <suppressed>0</suppressed>
+                                        <rejected>0</rejected>
+                                        <sent>0</sent>
+                                    </mcast-ipv6>
+                                    <flow-ipv4>
+                                        <backup>0</backup>
+                                        <received>0</received>
+                                        <active>0</active>
+                                        <suppressed>0</suppressed>
+                                        <rejected>0</rejected>
+                                        <sent>0</sent>
+                                    </flow-ipv4>
+                                    <flow-ipv6>
+                                        <backup>0</backup>
+                                        <received>0</received>
+                                        <active>0</active>
+                                        <suppressed>0</suppressed>
+                                        <rejected>0</rejected>
+                                        <sent>0</sent>
+                                    </flow-ipv6>
+                                    <label-ipv4>
+                                        <backup>0</backup>
+                                        <received>0</received>
+                                        <active>0</active>
+                                        <suppressed>0</suppressed>
+                                        <rejected>0</rejected>
+                                        <sent>0</sent>
+                                    </label-ipv4>
+                                </family-prefix>
+                                <sent>
+                                    <queues>0</queues>
+                                    <messages>12</messages>
+                                    <octets>329</octets>
+                                    <updates>3</updates>
+                                    <route-refresh>0</route-refresh>
+                                </sent>
+                                <received>
+                                    <queues>0</queues>
+                                    <messages>12</messages>
+                                    <octets>329</octets>
+                                    <updates>3</updates>
+                                    <route-refresh>0</route-refresh>
+                                </received>
+                            </statistics>
+                            <graceful-restart>
+                                <support>true</support>
+                                <restart-time-requested>120</restart-time-requested>
+                                <stale-route-time>360</stale-route-time>
+                                <peer-status>Not currently being helped</peer-status>
+                                <number-of-restarts>0</number-of-restarts>
+                                <received-end-of-rib-marker>
+                                    <family> ipv4</family>
+                                </received-end-of-rib-marker>
+                                <sent-end-of-rib-marker>
+                                    <family> ipv4</family>
+                                </sent-end-of-rib-marker>
+                            </graceful-restart>
+                        </neighbor>
+                    </bgp>
+                </vprn>
+            </service>
+        </state>
+    </data>
+</rpc-reply>
+2021-01-08 21:28:58,944 INFO [host 192.168.1.138 session-id 425] Requesting 'CloseSession'
+2021-01-08 21:28:59,033 INFO [host 192.168.1.138 session-id 425] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:046b7355-90b9-4b8f-8c5f-374f267f9bdd"><close-session/></rpc>]]>]]>
+2021-01-08 21:28:59,291 INFO [host 192.168.1.138 session-id 425] Received message from host
+2021-01-08 21:28:59,514 INFO Connected (version 2.0, client OpenSSH_3.5p1)
+2021-01-08 21:29:00,209 INFO Authentication (publickey) failed.
+2021-01-08 21:29:00,554 INFO Authentication (password) successful!
+2021-01-08 21:29:00,787 INFO [host 192.168.1.139 session 0x1f8fb88cee0] Sending:
+<?xml version="1.0" encoding="UTF-8"?><hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><capabilities><capability>urn:ietf:params:netconf:base:1.0</capability></capabilities></hello>]]>]]>
+2021-01-08 21:29:00,897 INFO [host 192.168.1.139 session 0x1f8fb88cee0] Received message from host
+2021-01-08 21:29:00,900 INFO [host 192.168.1.139 session-id 299] initialized: session-id=299 | server_capabilities=<dict_keyiterator object at 0x000001F8FB96CBD0>
+2021-01-08 21:29:00,901 INFO [host 192.168.1.139 session-id 299] Requesting 'Get'
+2021-01-08 21:29:01,000 INFO [host 192.168.1.139 session-id 299] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:47d6e889-c3e0-4b72-8b4f-49ac40360b8d"><get><filter type="subtree"><state xmlns="urn:nokia.com:sros:ns:yang:sr:state">
+  <service>
+    <vprn>
+      <service-name>1005</service-name>
+        <route-table>
+          <unicast>
+              <ipv4>
+                <route>
+                </route>
+              </ipv4>
+          </unicast>
+        </route-table>
+    </vprn>
+  </service>
+</state></filter></get></rpc>]]>]]>
+2021-01-08 21:29:01,280 INFO [host 192.168.1.139 session-id 299] Received message from host
+2021-01-08 21:29:01,283 INFO 192.168.1.139 "ROUTER STATE" readed/filtered:
+2021-01-08 21:29:01,283 INFO 
+<?xml version="1.0" encoding="UTF-8"?><rpc-reply message-id="urn:uuid:47d6e889-c3e0-4b72-8b4f-49ac40360b8d">
+    <data>
+        <state>
+            <service>
+                <vprn>
+                    <service-name>1005</service-name>
+                    <route-table>
+                        <unicast>
+                            <ipv4>
+                                <route>
+                                    <ipv4-prefix>1.1.1.1/32</ipv4-prefix>
+                                    <age>151</age>
+                                    <instance>0</instance>
+                                    <flags/>
+                                    <preference>170</preference>
+                                    <protocol>bgp</protocol>
+                                    <nexthop>
+                                        <nexthop-index>0</nexthop-index>
+                                        <flags>nh-is-indirect</flags>
+                                        <metric>0</metric>
+                                        <nexthop-ip>10.0.0.0</nexthop-ip>
+                                        <resolving-nexthop>
+                                            <resolving-nexthop-index>0</resolving-nexthop-index>
+                                            <flags/>
+                                            <if-index>4</if-index>
+                                            <if-vrtr-id>6</if-vrtr-id>
+                                            <metric>0</metric>
+                                            <nexthop-ip>10.0.0.0</nexthop-ip>
+                                        </resolving-nexthop>
+                                    </nexthop>
+                                </route>
+                                <route>
+                                    <ipv4-prefix>2.2.2.2/32</ipv4-prefix>
+                                    <age>203</age>
+                                    <instance>0</instance>
+                                    <flags/>
+                                    <preference>0</preference>
+                                    <protocol>local</protocol>
+                                    <nexthop>
+                                        <nexthop-index>0</nexthop-index>
+                                        <flags/>
+                                        <if-index>3</if-index>
+                                        <if-vrtr-id>6</if-vrtr-id>
+                                        <metric>0</metric>
+                                    </nexthop>
+                                </route>
+                                <route>
+                                    <ipv4-prefix>10.0.0.0/31</ipv4-prefix>
+                                    <age>203</age>
+                                    <instance>0</instance>
+                                    <flags/>
+                                    <preference>0</preference>
+                                    <protocol>local</protocol>
+                                    <nexthop>
+                                        <nexthop-index>0</nexthop-index>
+                                        <flags/>
+                                        <if-index>4</if-index>
+                                        <if-vrtr-id>6</if-vrtr-id>
+                                        <metric>0</metric>
+                                    </nexthop>
+                                </route>
+                            </ipv4>
+                        </unicast>
+                    </route-table>
+                </vprn>
+            </service>
+        </state>
+    </data>
+</rpc-reply>
+2021-01-08 21:29:01,288 INFO [host 192.168.1.139 session-id 299] Requesting 'Get'
+2021-01-08 21:29:01,382 INFO [host 192.168.1.139 session-id 299] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:ecf104bf-0d93-460a-9991-bb03ffcd77a2"><get><filter type="subtree"><state xmlns="urn:nokia.com:sros:ns:yang:sr:state">
+  <service>
+    <vprn>
+      <service-name>1005</service-name>
+        <route-table>
+          <unicast>
+              <ipv4>
+                <route>
+                </route>
+              </ipv4>
+          </unicast>
+        </route-table>
+    </vprn>
+  </service>
+</state></filter></get></rpc>]]>]]>
+2021-01-08 21:29:01,660 INFO [host 192.168.1.139 session-id 299] Received message from host
+2021-01-08 21:29:01,662 INFO 192.168.1.139 "VPRN ROUTE TABLE STATE" readed/filtered:
+2021-01-08 21:29:01,663 INFO 
+<?xml version="1.0" encoding="UTF-8"?><rpc-reply message-id="urn:uuid:ecf104bf-0d93-460a-9991-bb03ffcd77a2">
+    <data>
+        <state>
+            <service>
+                <vprn>
+                    <service-name>1005</service-name>
+                    <route-table>
+                        <unicast>
+                            <ipv4>
+                                <route>
+                                    <ipv4-prefix>1.1.1.1/32</ipv4-prefix>
+                                    <age>152</age>
+                                    <instance>0</instance>
+                                    <flags/>
+                                    <preference>170</preference>
+                                    <protocol>bgp</protocol>
+                                    <nexthop>
+                                        <nexthop-index>0</nexthop-index>
+                                        <flags>nh-is-indirect</flags>
+                                        <metric>0</metric>
+                                        <nexthop-ip>10.0.0.0</nexthop-ip>
+                                        <resolving-nexthop>
+                                            <resolving-nexthop-index>0</resolving-nexthop-index>
+                                            <flags/>
+                                            <if-index>4</if-index>
+                                            <if-vrtr-id>6</if-vrtr-id>
+                                            <metric>0</metric>
+                                            <nexthop-ip>10.0.0.0</nexthop-ip>
+                                        </resolving-nexthop>
+                                    </nexthop>
+                                </route>
+                                <route>
+                                    <ipv4-prefix>2.2.2.2/32</ipv4-prefix>
+                                    <age>203</age>
+                                    <instance>0</instance>
+                                    <flags/>
+                                    <preference>0</preference>
+                                    <protocol>local</protocol>
+                                    <nexthop>
+                                        <nexthop-index>0</nexthop-index>
+                                        <flags/>
+                                        <if-index>3</if-index>
+                                        <if-vrtr-id>6</if-vrtr-id>
+                                        <metric>0</metric>
+                                    </nexthop>
+                                </route>
+                                <route>
+                                    <ipv4-prefix>10.0.0.0/31</ipv4-prefix>
+                                    <age>203</age>
+                                    <instance>0</instance>
+                                    <flags/>
+                                    <preference>0</preference>
+                                    <protocol>local</protocol>
+                                    <nexthop>
+                                        <nexthop-index>0</nexthop-index>
+                                        <flags/>
+                                        <if-index>4</if-index>
+                                        <if-vrtr-id>6</if-vrtr-id>
+                                        <metric>0</metric>
+                                    </nexthop>
+                                </route>
+                            </ipv4>
+                        </unicast>
+                    </route-table>
+                </vprn>
+            </service>
+        </state>
+    </data>
+</rpc-reply>
+2021-01-08 21:29:01,666 INFO [host 192.168.1.139 session-id 299] Requesting 'Get'
+2021-01-08 21:29:01,761 INFO [host 192.168.1.139 session-id 299] Sending:
+<?xml version="1.0" encoding="UTF-8"?><rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:db9b9e3e-2eed-490b-a202-eafded348754"><get><filter type="subtree"><state xmlns="urn:nokia.com:sros:ns:yang:sr:state">
+  <service>
+    <vprn>
+      <service-name>1005</service-name>
+        <bgp>
+        </bgp>
+    </vprn>
+  </service>
+</state></filter></get></rpc>]]>]]>
+2021-01-08 21:29:02,029 INFO [host 192.168.1.139 session-id 299] Received message from host
+2021-01-08 21:29:02,032 INFO 192.168.1.139 "ROUTER BGP STATE" readed/filtered:
+2021-01-08 21:29:02,032 INFO 
+<?xml version="1.0" encoding="UTF-8"?><rpc-reply message-id="urn:uuid:db9b9e3e-2eed-490b-a202-eafded348754">
+    <data>
+        <state>
+            <service>
+                <vprn>
+                    <service-name>1005</service-name>
+                    <bgp>
+                        <convergence>
+                            <family>
+                                <family-type>ipv4</family-type>
+                                <up-peers-when-min-expired>0</up-peers-when-min-expired>
+                                <up-peers>1</up-peers>
+                                <converged-peers>1</converged-peers>
+                                <first-up-peer-time>0</first-up-peer-time>
+                                <last-up-peer-time>0</last-up-peer-time>
+                                <convergence-state>waiting</convergence-state>
+                                <convergence-time>0</convergence-time>
+                            </family>
+                            <family>
+                                <family-type>ipv6</family-type>
+                                <up-peers-when-min-expired>0</up-peers-when-min-expired>
+                                <up-peers>0</up-peers>
+                                <converged-peers>0</converged-peers>
+                                <first-up-peer-time>0</first-up-peer-time>
+                                <last-up-peer-time>0</last-up-peer-time>
+                                <convergence-state>waiting</convergence-state>
+                                <convergence-time>0</convergence-time>
+                            </family>
+                        </convergence>
+                        <statistics>
+                            <operational-state>Up</operational-state>
+                            <peer-groups>1</peer-groups>
+                            <peers>1</peers>
+                            <vpn-peer-groups>1</vpn-peer-groups>
+                            <vpn-peers>1</vpn-peers>
+                            <bgp-paths>8</bgp-paths>
+                            <path-memory>2840</path-memory>
+                            <routes-per-family>
+                                <ipv4>
+                                    <remote-routes>3</remote-routes>
+                                    <remote-active-routes>1</remote-active-routes>
+                                    <backup-routes>0</backup-routes>
+                                </ipv4>
+                                <ipv6>
+                                    <remote-routes>0</remote-routes>
+                                    <remote-active-routes>0</remote-active-routes>
+                                    <backup-routes>0</backup-routes>
+                                </ipv6>
+                                <route-flap-dampening>
+                                    <ipv4-ipv6>
+                                        <suppressed-routes>0</suppressed-routes>
+                                        <history-routes>0</history-routes>
+                                        <decay-routes>0</decay-routes>
+                                    </ipv4-ipv6>
+                                </route-flap-dampening>
+                                <mcast-ipv4>
+                                    <remote-routes>0</remote-routes>
+                                    <remote-active-routes>0</remote-active-routes>
+                                    <backup-routes>0</backup-routes>
+                                </mcast-ipv4>
+                                <mcast-ipv6>
+                                    <remote-routes>0</remote-routes>
+                                    <remote-active-routes>0</remote-active-routes>
+                                    <backup-routes>0</backup-routes>
+                                </mcast-ipv6>
+                                <flow-ipv4>
+                                    <remote-routes>0</remote-routes>
+                                    <remote-active-routes>0</remote-active-routes>
+                                    <backup-routes>0</backup-routes>
+                                </flow-ipv4>
+                                <flow-ipv6>
+                                    <remote-routes>0</remote-routes>
+                                    <remote-active-routes>0</remote-active-routes>
+                                    <backup-routes>0</backup-routes>
+                                </flow-ipv6>
+                                <label-ipv4>
+                                    <remote-routes>0</remote-routes>
+                                    <remote-active-routes>0</remote-active-routes>
+                                    <backup-routes>0</backup-routes>
+                                </label-ipv4>
+                            </routes-per-family>
+                        </statistics>
+                        <neighbor>
+                            <ip-address>10.0.0.0</ip-address>
+                            <statistics>
+                                <peer-port>54599</peer-port>
+                                <local-port>179</local-port>
+                                <session-state>Established</session-state>
+                                <last-state>Established</last-state>
+                                <last-event>recvOpen</last-event>
+                                <last-error>Cease (Connection Collision Resolution)</last-error>
+                                <negotiated-family>IPv4</negotiated-family>
+                                <operational-local-address>10.0.0.1</operational-local-address>
+                                <operational-remote-address>10.0.0.0</operational-remote-address>
+                                <peer-identifier>255.0.0.0</peer-identifier>
+                                <established-transitions>1</established-transitions>
+                                <last-established-time>2021-01-08T18:24:33.6Z</last-established-time>
+                                <in-update-elapsed-time>1239082</in-update-elapsed-time>
+                                <hold-time-interval>90</hold-time-interval>
+                                <remaining-idle-hold-time>0</remaining-idle-hold-time>
+                                <keep-alive-interval>30</keep-alive-interval>
+                                <number-of-update-flaps>0</number-of-update-flaps>
+                                <update-errors>0</update-errors>
+                                <negotiated-capability>4byte_asn</negotiated-capability>
+                                <negotiated-capability>mpbgp</negotiated-capability>
+                                <negotiated-capability>rt_refresh</negotiated-capability>
+                                <received-paths>2</received-paths>
+                                <dynamically-configured>false</dynamically-configured>
+                                <convergence-recv-eor>ipv4</convergence-recv-eor>
+                                <convergence-sent-eor>ipv4</convergence-sent-eor>
+                                <convergence-exceeded-min-wait>unknown</convergence-exceeded-min-wait>
+                                <remote-family>
+                                    <family>IPv4</family>
+                                </remote-family>
+                                <local-capability>
+                                    <capability>4byte_asn</capability>
+                                    <capability>mpbgp</capability>
+                                    <capability>rt_refresh</capability>
+                                </local-capability>
+                                <remote-capability>
+                                    <capability>4byte_asn</capability>
+                                    <capability>mpbgp</capability>
+                                    <capability>rt_refresh</capability>
+                                </remote-capability>
+                                <family-prefix>
+                                    <ipv4>
+                                        <backup>0</backup>
+                                        <received>3</received>
+                                        <active>1</active>
+                                        <suppressed>0</suppressed>
+                                        <rejected>0</rejected>
+                                        <sent>3</sent>
+                                    </ipv4>
+                                    <ipv6>
+                                        <backup>0</backup>
+                                        <received>0</received>
+                                        <active>0</active>
+                                        <suppressed>0</suppressed>
+                                        <rejected>0</rejected>
+                                        <sent>0</sent>
+                                    </ipv6>
+                                    <mcast-ipv4>
+                                        <backup>0</backup>
+                                        <received>0</received>
+                                        <active>0</active>
+                                        <suppressed>0</suppressed>
+                                        <rejected>0</rejected>
+                                        <sent>0</sent>
+                                    </mcast-ipv4>
+                                    <mcast-ipv6>
+                                        <backup>0</backup>
+                                        <received>0</received>
+                                        <active>0</active>
+                                        <suppressed>0</suppressed>
+                                        <rejected>0</rejected>
+                                        <sent>0</sent>
+                                    </mcast-ipv6>
+                                    <flow-ipv4>
+                                        <backup>0</backup>
+                                        <received>0</received>
+                                        <active>0</active>
+                                        <suppressed>0</suppressed>
+                                        <rejected>0</rejected>
+                                        <sent>0</sent>
+                                    </flow-ipv4>
+                                    <flow-ipv6>
+                                        <backup>0</backup>
+                                        <received>0</received>
+                                        <active>0</active>
+                                        <suppressed>0</suppressed>
+                                        <rejected>0</rejected>
+                                        <sent>0</sent>
+                                    </flow-ipv6>
+                                    <label-ipv4>
+                                        <backup>0</backup>
+                                        <received>0</received>
+                                        <active>0</active>
+                                        <suppressed>0</suppressed>
+                                        <rejected>0</rejected>
+                                        <sent>0</sent>
+                                    </label-ipv4>
+                                </family-prefix>
+                                <sent>
+                                    <queues>0</queues>
+                                    <messages>12</messages>
+                                    <octets>310</octets>
+                                    <updates>3</updates>
+                                    <route-refresh>0</route-refresh>
+                                </sent>
+                                <received>
+                                    <queues>0</queues>
+                                    <messages>12</messages>
+                                    <octets>329</octets>
+                                    <updates>3</updates>
+                                    <route-refresh>0</route-refresh>
+                                </received>
+                            </statistics>
+                            <graceful-restart>
+                                <support>true</support>
+                                <restart-time-requested>120</restart-time-requested>
+                                <stale-route-time>360</stale-route-time>
+                                <peer-status>Not currently being helped</peer-status>
+                                <number-of-restarts>0</number-of-restarts>
+                                <received-end-of-rib-marker>
+                                    <family> ipv4</family>
+                                </received-end-of-rib-marker>
+                                <sent-end-of-rib-marker>
+                                    <family> ipv4</family>
+                                </sent-end-of-rib-marker>
+                            </graceful-restart>
+                        </neighbor>
+                    </bgp>
+                </vprn>
+            </service>
+        </state>
+    </data>

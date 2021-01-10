@@ -1,0 +1,27 @@
+<config>
+    <configure xmlns="{{ ns }}">
+        {% for port in ports %}
+        <port operation="{{ port.operation }}">
+            <port-id>{{ port.id }}</port-id>
+            {% if port.state is defined %}
+            <admin-state>{{ port.state }}</admin-state>
+            {% endif %}
+            {% if port.connector is defined %}
+            <connector>
+                <{{ port.connector }}>{{ port.connector_type }}</{{ port.connector }}>
+            </connector>
+            {% endif %}
+            {% if port.ethernet_mode is defined  or port.encap_type is defined %}
+            <ethernet>
+                {% if port.ethernet_mode is defined %}
+                <mode>{{ port.ethernet_mode }}</mode>
+                {% endif %}
+                {% if port.encap_type is defined %}
+                <encap_type>{{ port.encap_type }}</encap_type>
+                {% endif %}
+            </ethernet>
+            {% endif %}
+        </port>
+        {% endfor %}
+    </configure>
+</config>
